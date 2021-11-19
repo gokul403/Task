@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    
+ 
+      function Check(str) {
+      
+        var pattern = new RegExp(
+          "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[-+_!@#$%^&*.,?]).+$"
+        );
+ 
+     
+        if (!str || str.length === 8) {
+          document.write("True" + "<br>");
+          return;
+        }
+ 
+        if (pattern.test(str)) {
+          document.write("False" + "<br>");
+        } else {
+          document.write("True" + "<br>");
+        }
+        return;
+      }
+ 
+      
+      var str = "Gokul@48";
+      Check(str);
+    
+    </script>
+    <input type="text" id="username">
+    <button onclick=" Check()">check</button>
+
+</body>
+</html>
